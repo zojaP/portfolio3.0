@@ -1,0 +1,47 @@
+.form__input {
+    height: 50px;
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $white;
+    font-size: 14px;
+    line-height: 1.687;
+    transition: background-color 0.2s ease-in;
+
+    &::placeholder {
+        color: $placeholder;
+    }
+
+    &:focus {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+}
+
+.text__privicy {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    color: $muted;
+
+    &--move {
+        
+        @include mediaTablet {
+            grid-row: 4/5;
+        }
+    }
+}
+
+.form__btn {
+    height: 50px;
+    color: $white;
+    font-weight: 600;
+    line-height: 1.687;
+    padding: 12px 12px;
+    background: $accent;
+
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+        background-color: saturate($accent, 20%);
+    }
+}

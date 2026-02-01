@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,300;1,300&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+    font-family: $font-main;
+    background-color: $dark;
+    color: $white;
+    font-size: 16px;
+}
+
+a {
+    color: $white;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+        color: $accent;
+    }
+}
+
+.container {
+    margin: auto;
+    padding: 0px 15px;
+    max-width: 1140px;
+
+    &--small {
+        max-width: 824px;
+        padding: 0 15px;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+.visually-hidden {
+    /*contain text within 1px box*/
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+
+    /*keep the layuot*/
+    position: absolute;
+
+    /*remove any visible trace*/
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%); /* brouser in the future*/
+
+    white-space: nowrap;
+}
+
+.none {
+    display: none !important;
+}
+
+.title-2 {
+    font-family: $font-accent;
+    font-size: 36px;
+    font-weight: 700;
+    color: $accent;
+    @include mediaTablet {
+        font-size: 30px;
+    }
+}
+
+.link-bold {
+    color: $accent;
+    font-weight: bold;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.thanksWebCademy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    font-family: $font-secondary;
+    color: $muted;
+    font-size: 16px;
+    font-weight: 300;
+}
